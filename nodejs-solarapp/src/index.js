@@ -4,7 +4,7 @@ const cors = require('cors');
 const dgram = require('dgram');
 const port = process.env.PORT || 9876;
 
-const inverterAddress = '192.168.1.150'; // Replace your IP address here
+const inverterAddress = '${process.env.IPADDRESS}'; // Replace your IP address here
 const message = functions.hexToBytes('aa55c07f0106000245');
 
 const GridInOutMode = {
